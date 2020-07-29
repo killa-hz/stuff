@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const InputBox = () => {
+const InputBox = (props) => {
+  const [input, setInput] = useState('');
+
+  function handleInput(e) {
+    setInput(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.onInput(input);
+    setInput('');
+  }
+
   return (
     <div className="inputContainer">
       <div className="inputBox">
@@ -9,8 +21,10 @@ const InputBox = () => {
             className="input"
             type="text"
             placeholder="enter text here"
+            onInput={handleInput}
+            value={input}
           ></input>
-          <button className="inputBtn" type="submit">
+          <button className="inputBtn" type="submit" onClick={handleSubmit}>
             Click here
           </button>
         </form>

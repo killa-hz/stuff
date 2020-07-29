@@ -102,3 +102,32 @@ nav a:hover {
 .inputForm input:focus {
   outline: none;
 }
+
+.inputBtn {
+  padding: 12px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  background-color: inherit;
+  font-size: 1.2rem;
+}
+
+.inputBtn:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.boxItemContainer {
+  border: 1px solid #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 40px;
+  width: 200px;
+  height: 150px;
+  overflow: auto;
+  display: inline-block;
+}
+
+.boxItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
